@@ -1,0 +1,52 @@
+#include <stdio.h>
+main()
+{
+float suhu, hasil;
+int jenis, benar;
+char back;
+printf("\t\t\t\t\t\t\tBy : Atika Mayangsari");
+printf("\t\t\t\"Program Konversi Suhu\"\n\n");
+printf("Apa itu program konversi suhu\?\n");
+printf("Program yang berfungsi untuk mengkonversikan suhu secara otomatis\n");
+printf("Dengan memasukan pilihan suhu dan memasukan besarnya suhu \n");
+ulang :
+    printf("Pilihan satuan suhu yang ingin anda konversikan : \n\t");
+    printf("1. Celcius \n\t");
+    printf("2. Farenheit \n\t");
+    printf("3. Rheamur \n");
+printf("\*Pilihan anda : ");
+scanf("%d", &jenis);
+    switch(jenis)
+    {
+case 1:
+    printf("\*Masukan besar suhu : ");
+    scanf("%f", &suhu);
+    hasil=(suhu*1.8)+32;
+    printf("Suhu dalam Farenheit : %.2f Farenheit\n", hasil);
+    hasil=suhu*0.8;
+    printf("Suhu dalam Rheamur : %.2f Rheamur\n", hasil);
+    printf("\t\t\t\tSelamat anda berhasil. . .");
+    break;
+case 2:
+    printf("Masukan besar suhu : ");
+    scanf("%f", &suhu);
+    hasil=(suhu-32)/1.8;
+    printf("Suhu dalam Celcius : %.2f Celcius\n", hasil);
+    hasil=(suhu-32)/2.25;
+    printf("Suhu dalam Rheamur : %.2f Rheamur\n", hasil);
+    printf("\t\t\t\tSelamat anda berhasil. . .");
+    break;
+case 3:
+    printf("Masukan besar suhu : ");
+    scanf("%f", &suhu);
+    hasil=suhu/0.8;
+    printf("Suhu dalam Celcius : %.2f Celcius\n", hasil);
+    hasil=(suhu*2.25)+32;
+    printf("Suhu dalam Farenheit : %.2f Farenheit\n", hasil);
+    printf("\t\t\t\tSelamat anda berhasil. . .");
+    break;
+    default:
+    printf("Maaf kode yang anda masukan tidak tepat ...\n");
+    goto ulang;
+    }
+}
